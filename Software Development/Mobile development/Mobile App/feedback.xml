@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/feedback_layout"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/bg1">
+
+<TextView
+    android:id="@+id/feedback_header"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Feedback"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    android:textColor="#FFFFFF"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp" />
+
+<!-- Stars Rating Component -->
+<RatingBar
+    android:id="@+id/app_rating"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:numStars="5"
+    android:rating="0"
+    android:stepSize="1"
+    app:layout_constraintTop_toBottomOf="@id/rating_question"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="16dp" />
+
+<TextView
+    android:id="@+id/rating_question"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="68dp"
+    android:text="How do you find my app?"
+    android:textColor="#FFFFFF"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/feedback_header" />
+
+<TextView
+    android:id="@+id/navigation_question"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="76dp"
+    android:text="Was the app easily navigated?"
+    android:textColor="#FFFFFF"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/rating_question" />
+
+<!-- Radio Buttons for navigation question (Yes, No, Somewhat) -->
+<RadioGroup
+    android:id="@+id/navigation_radio_group"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toBottomOf="@id/navigation_question"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="16dp">
+
+    <RadioButton
+        android:id="@+id/yes_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+        android:textColor="#FFFFFF" />
+
+    <RadioButton
+        android:id="@+id/no_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No"
+        android:textColor="#FFFFFF" />
+
+    <RadioButton
+        android:id="@+id/somewhat_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Somewhat"
+        android:textColor="#FFFFFF" />
+</RadioGroup>
+
+<TextView
+    android:id="@+id/change_question"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="152dp"
+    android:text="What would you change about the app?"
+    android:textColor="#FFFFFF"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/navigation_question" />
+
+<EditText
+    android:id="@+id/change_description"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="Enter your suggestions here"
+    android:inputType="textMultiLine"
+    android:background="#000000"
+    android:textColor="#FFFFFF"
+    app:layout_constraintTop_toBottomOf="@id/change_question"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp" />
+
+<TextView
+    android:id="@+id/layout_question"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:text="How was the code layout?"
+    android:textColor="#FFFFFF"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/change_description" />
+
+<EditText
+    android:id="@+id/layout_description"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="Enter your suggestions here"
+    android:inputType="textMultiLine"
+    android:background="#000000"
+    android:textColor="#FFFFFF"
+    app:layout_constraintTop_toBottomOf="@id/layout_question"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp" />
+
+<TextView
+    android:id="@+id/improvement_question"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="60dp"
+    android:text="What can I improve on in my app?"
+    android:textColor="#FFFFFF"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/layout_question" />
+
+<EditText
+    android:id="@+id/improvement_description"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="16dp"
+    android:hint="Enter your suggestions here"
+    android:inputType="textMultiLine"
+    android:background="#000000"
+    android:textColor="#FFFFFF"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/improvement_question" />
+
+<Button
+    android:id="@+id/submit_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Submit"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_marginStart="16dp"
+    android:layout_marginBottom="16dp" />
+
+<Button
+    android:id="@+id/home_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Home"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
